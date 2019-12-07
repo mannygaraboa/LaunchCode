@@ -6,7 +6,8 @@
 // Only Length and push()
 
 let figures1 = [-1, -7, 1, 5, -7, 0];
-let figures2 = [4,5,6];  
+let figures2 = [4,5,6];
+let figures3 = [5, 4, 3, 2, 1];
 
 function lowValue (array)
 {
@@ -27,6 +28,10 @@ function lowValue (array)
 
 		if(array[i] === lowNum)
 		{
+      if(lowPos.length > 0 && lowPos[0] != lowNum)
+      {
+        lowPos.length = 0;
+      }
       console.log(array[i] + " : " + lowNum);
       console.log("Pushing Position: " + i);
 			lowPos.push(i);
